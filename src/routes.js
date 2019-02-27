@@ -19,6 +19,7 @@ routes.get('/ads/:id', handle(controllers.AdController.show))
 routes.post('/ads', validate(validators.Ad), handle(controllers.AdController.store))
 routes.put('/ads/:id', validate(validators.Ad), handle(controllers.AdController.update))
 routes.delete('/ads/:id', handle(controllers.AdController.destroy))
+routes.put('/ads/sold/:id', validate(validators.Ad), handle(controllers.AdController.update))
 
 routes.post('/purchase', validate(validators.Purchase), handle(controllers.PurchaseController.store))
 
